@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Todo esto se pone cuando escribes "html5" y le das enter, te da el formato en automático, como cuando metías a pata las librerías en C XD-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+    <!--Esta es la fuente Google Sans, quiero que mis páginas les recuerden a páginas de Google-->
+
+    <link rel="preload" href="css/style.css" as="style">
+    <!--El "preload" como relación del link, es para que sea lo primero que cargue de la página, y ya después el resto, pero tiene que ir junto con el link href tradicional-->
+    <!--Como quien dice: "Te aviso que te voy a pedir que carques ESTE archivo, para que lo tengas a la mano"-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- link, tal cual, vincula o conecta un archivo con otro, en este caso, el html con el css, y rel se le pone para decir qué relación tiene este archivo con el html, en este caso, que es la hoja de estilos, o sea, la hoja que describe de qué forma se tiene que ver cada elemento del html-->
+
+    <!--Es de esta forma que podremos vincular un head igual para todas las subpáginas que hagamos!...-->
+    <link href="css/normalize.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Desde el header hasta el cierre del nav, bien podría ser un solo archivo llamado "head", para incorporarlo en todas las páginas... -->
+    <header>
+        <h1> Alfonso Vélez - <span class="subtítulo"> Desarrollador Web</span></h1>
+        <!--Piensa en <span> como un pedazo de cinta, o como el ampersand & en algunas fórmulas y lenguajes de programación: Sirve para unir un objeto con otro, pero que al mismo tiempo lo trate como un objeto diferente que originalmente no pertenecía al objeto original, y que, por lo tanto, puede tener propiedades (en css) distintas a las del objeto en sí-->
+
+        <div class="cajita">
+
+            <button class="menu-imagen" aria-label="Menu">
+                <span class="texto-menu">Menú</span>
+                <picture>
+                    <source srcset="iconos/hamburguesa.svg" type="image/svg+xml" loading="lazy">
+                    <img src="iconos/hamburguesa.svg" alt="Icono de menú hamburguesa" loading="lazy">
+                </picture>
+            </button>
+
+
+            <nav class="barra-de-arriba">
+                <a href="index.html">Inicio</a>
+                <a href="sobremi.html">Sobre mí</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="#">
+                    <picture>
+                        <source srcset="iconos/lunita.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/lunita.svg" alt="Modo Oscuro" class="boton-modo-oscuro">
+                    </picture>
+                </a>
+
+            </nav>
+        </div>
+
+        <section class="portada">
+            <div class="caja-portada">
+                <h2 class="subtítulo">Desarrollador Web</h2>
+                <div class="caja-ubicación">
+                    <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="#f8f012" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-user-pin">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                        <path d="M6 21v-2a4 4 0 0 1 4 -4h2.5" />
+                        <path
+                            d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879" />
+                        <path d="M19 18v.01" />
+                    </svg> <!-- Icono ubicación -->
+                    <p class="subtítulo"> Desde 1994, hecho en Guadalajara, Jalisco.</p>
+                </div>
+                <a class="botón" href="contacto.html">¡Contáctame!</a>
+            </div>
+        </section>
+    </header>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Todo esto se pone cuando escribes "html5" y le das enter, te da el formato en automático, como cuando metías a pata las librerías en C XD-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+    <!--Esta es la fuente Google Sans, quiero que mis páginas les recuerden a páginas de Google-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <!--El "preload" como relación del link, es para que sea lo primero que cargue de la página, y ya después el resto, pero tiene que ir junto con el link href tradicional-->
+    <!--Como quien dice: "Te aviso que te voy a pedir que carques ESTE archivo, para que lo tengas a la mano"-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- link, tal cual, vincula o conecta un archivo con otro, en este caso, el html con el css, y rel se le pone para decir qué relación tiene este archivo con el html, en este caso, que es la hoja de estilos, o sea, la hoja que describe de qué forma se tiene que ver cada elemento del html-->
+
+    <!--Es de esta forma que podremos vincular un head igual para todas las subpáginas que hagamos!...-->
+    <link href="css/normalize.css" rel="stylesheet">
+    <title>Alfonso Vélez - Desarrollador Web</title>
+</head>
+
+<body>
+    <div data-include="header">
+
+    </div>
+
+    <main class="cuerpo sombreado">
+        <h2>Proyectos</h2>
+
+        <div class="contenedor-3en1">
+            <div class="contenido-proyecto">
+                <picture class="foto-proyecto">
+                    <source srcset="img/piedraAngular.png" type="image/png">
+                    <img src="img/piedraAngular.png" alt="Piedra Angular" loading="lazy">
+                </picture>
+                <h3>Piedra Angular</h3>
+                <details class="descripcion-proyecto">
+                    <summary>Descripción</summary>
+                    <p>Es esta misma página, la cual he ido actualizando para convertirla en mi tarjeta de presentación,
+                        mi portafolio, para que puedan ver mis proyectos, mis habilidades, mi experiencia, etcétera.</p>
+                </details>
+                <div class="iconos-lenguajes">
+                    <picture>
+                        <source srcset="iconos/html5.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/html5.svg" alt="Icono de HTML5" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/css3.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/css3.svg" alt="Icono de CSS3" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/javascript.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/javascript.svg" alt="Icono de JavaScript" loading="lazy">
+                    </picture>
+                </div>
+                <div class="botones-proyecto">
+                    <a href="https://alfonsovelez.netlify.app/" target="_blank" class="botón">Ver página</a>
+                    <a href="https://github.com/AlfieVS/Piedra-Angular" target="_blank" class="botón">Ver código</a>
+                </div>
+            </div>
+
+            <div class="contenido-proyecto">
+                <picture class="foto-proyecto">
+                    <source srcset="img/unag.png" type="image/png">
+                    <img src="img/unag.png" alt="UNAG" loading="lazy">
+                </picture>
+                <h3>Portal UNAG</h3>
+                <details class="descripcion-proyecto">
+                    <summary>Descripción</summary>
+                    <p>Es la página principal de la Universidad Antropológica de Guadalajara. Durante el tiempo que
+                        trabajé
+                        para la Universidad, además de darle mantenimiento a la página, modificando información de los
+                        programas de la universidad en la base de datos y cambiando imágenes, también desarrollé nuevas
+                        secciones dentro de ella, como la publicación de su revista "Pilares", un directorio de los
+                        administrativos principales para que los alumnos supieran a quién acudir, landing pages nuevas
+                        para
+                        sus nuevas licenciaturas, maestrías y doctorados, modificaciones al maquetado de la página
+                        acorde a
+                        recomendaciones del departamento de marketing y comunicación, funciones para el posicionamiento
+                        de
+                        la página en Google (SEO), además de accesos directos a distintas plataformas educativas
+                        internas.
+                    </p>
+
+                    <p>Así mismo, una vez al año, en diciembre, colocaba música navideña y un efecto de copos de nieve
+                        cayendo en toda la página. Me gustaba poder crear un entorno amigable para el alumno. </p>
+                </details>
+                <div class="iconos-lenguajes">
+                    <picture>
+                        <source srcset="iconos/html5.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/html5.svg" alt="Icono de HTML5" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/css3.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/css3.svg" alt="Icono de CSS3" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/javascript.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/javascript.svg" alt="Icono de JavaScript" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/php.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/php.svg" alt="Icono de PHP" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/sql.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/sql.svg" alt="Icono de SQL" loading="lazy">
+                    </picture>
+                </div>
+                <div class="botones-proyecto">
+                    <a href="https://unag.mx/" class="botón" target="_blank">Ver página</a>
+                    <a href="componentes/Carta Recomendacion Alfie.pdf" class="botón" target="_blank">
+                        <img src="iconos/documento.svg" alt="Ícono de documento"> Recomendación
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="contenido-proyecto">
+                <picture class="foto-proyecto">
+                    <source srcset="img/AlfieDevStore.png" type="image/png">
+                    <img src="img/AlfieDevStore.png" alt="AlfieDevStore" loading="lazy">
+                </picture>
+                <h3>AlfieDevStore</h3>
+                <details class="descripcion-proyecto">
+                    <summary>Descripción</summary>
+                    <p>Es una plataforma básica de venta, en este caso, de ropa, sólo contiene la lógica de frontend, no
+                        está conectada a una base de datos real ni a ningún servicio de pago.</p>
+                </details>
+                <div class="iconos-lenguajes">
+                    <picture>
+                        <source srcset="iconos/html5.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/html5.svg" alt="Icono de HTML5" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/css3.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/css3.svg" alt="Icono de CSS3" loading="lazy">
+                    </picture>
+                </div>
+                <div class="botones-proyecto">
+                    <a href="https://alfiedevstore.netlify.app/" target="_blank" class="botón">Ver página</a>
+                    <a href="https://github.com/AlfieVS/AlfieDev-Store" target="_blank" class="botón">Ver código</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contenedor-3en1">
+            <div class="contenido-proyecto">
+                <picture class="foto-proyecto">
+                    <source srcset="img/CoffeeBreakBlog.png" type="image/png">
+                    <img src="img/CoffeeBreakBlog.png" alt="CoffeeBreakBlog" loading="lazy">
+                </picture>
+                <h3>CoffeeBreakBlog</h3>
+                <details class="descripcion-proyecto">
+                    <summary>Descripción</summary>
+                    <p>Es una página web de blog de café, la cual, además de la sección de blog, y noticias, también
+                        tiene
+                        una sección para inscribirse a talleres ficticios de café y una sección de contacto con un
+                        formulario para inscribirse en dichos talleres.</p>
+                </details>
+                <div class="iconos-lenguajes">
+                    <picture>
+                        <source srcset="iconos/html5.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/html5.svg" alt="Icono de HTML5" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/css3.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/css3.svg" alt="Icono de CSS3" loading="lazy">
+                    </picture>
+                </div>
+                <div class="botones-proyecto">
+                    <a href="https://coffeebreakblog.netlify.app/" target="_blank" class="botón">Ver página</a>
+                    <a href="https://github.com/AlfieVS/CoffeeBreak-Blog" target="_blank" class="botón">Ver código</a>
+                </div>
+            </div>
+
+            <div class="contenido-proyecto">
+                <picture class="foto-proyecto">
+                    <source srcset="img/AlfieFest2026.png" type="image/png">
+                    <img src="img/AlfieFest2026.png" alt="AlfieFest2026" loading="lazy">
+                </picture>
+                <h3>AlfieFest2026</h3>
+                <details class="descripcion-proyecto">
+                    <summary>Descripción</summary>
+                    <p>Es una página web de un festival de música falso, con motivo de mi cumpleaños.</p>
+                    <p>Esta página ya contiene desplazamiento dentro de la misma usando javascript, que también fue
+                        utilizado para añadir, cambiar o eliminar de forma dinámica imágenes dentro de la galería
+                        interactiva. Seleccionando una imagen, se muestra una versión de mayor tamaño de la misma y se
+                        incorpora un botón de cerrar. El diseño de la misma ya fue realizado usando SASS, y en el "hero"
+                        de
+                        la página se ha insertado un video de fondo y un pequeño reproductor para activar o desactivar
+                        una
+                        canción dentro de la página.</p>
+                </details>
+                <div class="iconos-lenguajes">
+                    <picture>
+                        <source srcset="iconos/html5.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/html5.svg" alt="Icono de HTML5" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/css3.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/css3.svg" alt="Icono de CSS3" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/javascript.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/javascript.svg" alt="Icono de JavaScript" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/sass.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/sass.svg" alt="Icono de SASS" loading="lazy">
+                    </picture>
+                </div>
+                <div class="botones-proyecto">
+                    <a href="https://alfiefest.netlify.app/" target="_blank" class="botón">Ver página</a>
+                    <a href="https://github.com/AlfieVS/AlfieFest-2026" target="_blank" class="botón">Ver código</a>
+                </div>
+            </div>
+
+
+            <div class="contenido-proyecto">
+                <picture class="foto-proyecto">
+                    <source srcset="img/CompraCasa.png" type="image/png">
+                    <img src="img/CompraCasa.png" alt="CompraCasa" loading="lazy">
+                </picture>
+                <h3>CompraCasa</h3>
+                <details class="descripcion-proyecto">
+                    <summary>Descripción</summary>
+                    <p>Es una plataforma de venta de casas, que pretende ser mucho más completa que la de ropa, tiene
+                        una
+                        sección principal con publicaciones destacadas, otra para una breve descripción de la hipotética
+                        empresa que vende las casas, otra con todos los anuncios, una más con publicaciones tipo blog,
+                        que
+                        puede ser utilizada para dar consejos para hacer una mejor compra o de diseños de casas, y por
+                        último, una sección de contacto con formulario para que los usuarios se pongan en contacto con
+                        la
+                        empresa, además incorporando un botón de "modo oscuro" para cambiar el tema de fondo de la
+                        página
+                        hecho con javascript, con el que también incorporé un "menú de hamburguesa", para hacerla más
+                        responsiva en dispositivos móviles.</p>
+                    <p>Es un proyecto que aún está en desarrollo, ya que este permitirá la administración de las
+                        publicaciones y de las entradas en el blog, usando PHP y SQL, incluso apunto a que ya tenga una
+                        plataforma de venta experimental y que además sea adaptable también para otro tipo de bienes, no
+                        sólo casas, sino también, por ejemplo, automóviles.</p>
+                </details>
+                <div class="iconos-lenguajes">
+                    <picture>
+                        <source srcset="iconos/html5.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/html5.svg" alt="Icono de HTML5" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/css3.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/css3.svg" alt="Icono de CSS3" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/javascript.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/javascript.svg" alt="Icono de JavaScript" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="iconos/sass.svg" type="image/svg+xml" loading="lazy">
+                        <img src="iconos/sass.svg" alt="Icono de SASS" loading="lazy">
+                    </picture>
+                </div>
+                <div class="botones-proyecto">
+                    <a href="https://compracasa.netlify.app/" target="_blank" class="botón">Ver página</a>
+                    <a href="https://github.com/AlfieVS/CompraCasa" target="_blank" class="botón">Ver código</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cuerpo sombreado">
+            <h2>Proyectos a futuro:</h2>
+            <ul>
+                <li>"QuénLoQuele?": Una página para administrar una barbería, con sistema de citas y gestión de
+                    clientes.</li>
+                <li>"Mission Control": Un administrador de proyectos y tareas, ambientado en el clásico juego "Metal
+                    Slug"</li>
+                <li>"CompraAuto" (Nombre por definir): Adaptar el proyecto "CompraCasa" para la venta de automóviles.
+                </li>
+                <li>"Portal UNAG 2.0": Me quedaron ideas que no pude materializar cuando trabajaba en UNAG, es posible
+                    que en un futuro me quite la espinita y lo realice, todo depende de qué tanto tiempo libre tenga en
+                    un
+                    futuro...</li>
+            </ul>
+
+
+        </div>
+
+    </main>
+
+    <div data-include="footer">
+
+    </div>
+</body>
+<script src="js/llamarComponente.js"></script>
+<script src="js/accesibilidad.js"></script>
+
+</html>

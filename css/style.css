@@ -1,0 +1,619 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Google Sans', sans-serif;
+    box-sizing: border-box;
+    /* Con esto, todos los elementos html, tomarán en cuenta el padding y el border, para calcular su tamaño total */
+}
+
+*,
+*:before,
+*:after {
+    /* Con esto, todos los elementos html, y sus pseudo-elementos (antes y después), tomarán en cuenta el box-sizing border-box */
+    box-sizing: inherit;
+    /* Con esto, todos los elementos html, heredarán el box-sizing del elemento padre, que en este caso es el html */
+}
+
+body {
+    font-size: 1.9rem;
+    background-image: linear-gradient(to top, var(--azul-fondo) 0%, var(--blanco) 100%);
+}
+
+/*Los códigos arriba de este comentario, son para normalizar el tamaño del texto... bueno, no sé qué tan útil sea, existiendo el archivo "normalize.css", pero manéjalo como un estándar que no está de más incorporar en todos los códigos, para que, con esto, el valor "rem", equivalga a 10 pixeles y pueda utilizarse como una medida genérica en cualquier dispositivo que se vea la página, y que en todos tenga la misma proporción física y espacialmente hablando*/
+
+:root {
+    /* root es un selector, como todos los de aquí, peeeero, es uno especial, como una palabra reservada de un lenguaje de programación, y éste aplica para todo el html... Vaya! Sirve para definir "variables globales", básicamente */
+
+    --blanco: #ffffff;
+    --negro: #000000;
+    --amarillo: #ffc107;
+    --amarillo-suave: rgb(255 221 0);
+    --azul-rey: #374F63;
+    --azul-suave: #73E6D7;
+    --transparencia: rgba(0, 0, 0, 0.5);
+    --transparencia-2: rgba(0, 0, 0, 0.7);
+    --azul-fondo: rgba(0, 192, 255, 0.2);
+    --gris: #707070;
+    --grisOscuro: #3a3a3a;
+
+    /*Ahora, si en el atributo de color, ponemos "var(--azul-rey)", directamente pondrá su valor en hexadecimal definido aquí,
+
+    PEEEEERO! No sólo sirve para los colores, sirve para definir cualquier variable global: Medidas en rem, por ejemplo: "texto-chico: 1.5 rem;", entonces úsalo con cuidado, y sólo para parámetros globales, lo que no sea global, vale más la pena repetirlo, no importa las veces que sean, a no ser que sea un parámetro que vas a usar para toda la página. 
+    
+    NOTA: Parece ser que siempre debe de llevar "--" antes del nombre de la variable, para que la reconozca como tal.*/
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 3.8rem;
+    margin-top: 0;
+    /* Evita que el margen colapse fuera del body y se vea el fondo blanco */
+    padding-top: 2.5rem;
+    /* Reemplaza el espacio que ocupaba el margen */
+}
+
+.subtítulo {
+    font-size: 2.8rem;
+}
+
+
+
+.cajita {
+    /* Hicimos la "cajita" para poder mover y organizar los elementos dentro de ella de forma independiente, dentro del div */
+    background-color: var(--azul-rey);
+    margin: 0 auto;
+    /* Con esto, centramos la cajita horizontalmente en la página */
+
+}
+
+
+.barra-de-arriba {
+    /*text-align: center; /* Con esto, todos los elementos "inline" o "inline-block" dentro de este div, se centrarán automáticamente */
+    display: flex;
+    /* Con display:flex, los elementos dentro del div, pueden moverse libremente dentro de él, sin importar su orden en el html */
+    /* Puedes usar "flex-direction: column;" (también existe reverse-column, row, que es el default, y reverse row) para apilar los elementos dentro del div, uno debajo del otro, en vez de uno al lado del otro, y, para este caso, no se usaría "justify-content", ese sería sólo para contenido en horizontal (row, reverse-row), en este caso, tendría que usarse "align-items", con las mismas propiedades. */
+
+
+    justify-content: space-between;
+    /* Con esto, todos los elementos dentro del div, se distribuirán equitativamente */
+    flex-wrap: wrap;
+    /* Permite que los elementos hagan wrap cuando el espacio sea limitado */
+    gap: 1rem;
+    /* Espacio entre elementos (mejor que paddings enormes en cada enlace) */
+    align-items: center;
+    height: 5rem;
+}
+
+.barra-de-arriba a {
+    color: var(--blanco);
+    /* El color del texto de los enlaces, no busques font-color o text-color... como el selector es un enlace, o texto, ya estás diciendo que le estás dando color al texto o enlace */
+    /* display: inline-block; /* Con esto, los enlaces se comportan como "cajitas" independientes, pero siguen estando en línea, uno al lado del otro, y así podemos darles medidas de ancho, alto, padding, margin, etcétera */
+    /* Resumen: display sirve para darle a entender al css cómo debe de mostrarse un elemento html, y puede ser como bloque (block), apilando los elementos hacia abajo, en línea (inline), apilando los elementos hacia la derecha o una mezcla de ambos (inline-block), que los apila hacia la derecha, y, cuando los elementos ya pasan el ancho de la pantalla, los apila en otro renglón hacia abajo. Considera también que hay display:flex (permite poner un elemento donde sea dentro del div) y display:grid, que permite organizar elementos en una cuadrícula */
+    /* como ya estamos poniendo arriba "display:flex" en el div contenedor, no es necesario ponerlo en los elementos hijos, ya que heredan esa propiedad del padre, o sea que esto ya valió madres XD */
+    font-size: 2rem;
+    padding-inline: clamp(1rem, 6vw, 15rem);
+    /* Padding lateral responsivo: mínimo 1rem, máximo 15rem, escala con el viewport */
+    padding-block: 1.75rem;
+    /* Nota: margin es para dar espacio fuera del elemento, y padding es para dar espacio dentro del elemento */
+    /*Pensé que estos paddings no funcionarían con display:flex, pero sí jalan!*/
+
+    /*Estos dos paddings no los usa el profe, pero me gusta cómo se ve así XD */
+    text-decoration: none;
+    /* Con esto, quitamos el subrayado de los enlaces */
+    position: sticky;
+}
+
+.barra-de-arriba a:hover {
+    /* El selector ":hover" sirve para aplicar estilos cuando el cursor del mouse está encima del elemento */
+    /* En otras palabras, aquí estamos definiendo qué queremos que pase con <a> cuando el mouse esté encima de él */
+    background-color: var(--amarillo);
+    color: var(--azul-rey);
+    font-weight: bold;
+}
+
+.boton-modo-oscuro {
+    width: 3rem;
+    height: 3rem;
+    filter: invert(1);
+    /* Pone la luna de color blanco */
+    display: block;
+    /* Ayuda a que tome bien el tamaño dentro del enlace */
+}
+
+.barra-de-arriba a:hover .boton-modo-oscuro {
+    filter: none;
+    /* Al pasar el mouse (fondo amarillo), que vuelva a ser oscura */
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Con esto, definimos estilos específicos para pantallas con un ancho máximo de 600 pixeles, es decir, para dispositivos móviles */
+    .barra-de-arriba {
+        flex-direction: column;
+        /* Con esto, los elementos dentro del div se apilarán uno debajo del otro, en vez de uno al lado del otro */
+        height: auto;
+        /* Con esto, el alto del div se ajustará automáticamente al contenido dentro de él */
+    }
+
+    .barra-de-arriba a {
+        padding-inline: 0;
+        /* Con esto, quitamos el padding lateral de los enlaces, para que ocupen todo el ancho disponible */
+        padding-block: 1rem;
+        /* Con esto, reducimos el padding vertical de los enlaces, para que no ocupen tanto espacio verticalmente */
+        font-size: 1.5rem;
+    }
+
+}
+
+.portada {
+    height: 45rem;
+
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    /* Con esto, la imagen de fondo no se repetirá */
+
+    background-size: cover;
+    /* Con esto, la imagen de fondo cubrirá todo el div, sin importar su tamaño */
+    background-position: start;
+    /* Con esto, la imagen de fondo se centrará en el div */
+    display: flex;
+    /* Con esto, podemos centrar el contenido dentro del div */
+    justify-content: center;
+    /* Con esto, el contenido dentro del div se centrará horizontalmente */
+    align-items: flex-start;
+    /* Queremos que siempre se vea la parte de arriba de la imagen */
+    position: relative;
+    /* Con esto, podemos posicionar elementos dentro del div de forma absoluta, relativa al div */
+    color: var(--blanco);
+    /* Con esto, el color del texto dentro del div será blanco */
+}
+
+@media screen and (max-width: 768px) {
+    .portada {
+        height: 25rem;
+    }
+
+}
+
+.caja-portada {
+    position: absolute;
+    /* Con esto, podemos posicionar este div de forma absoluta, relativa al div padre (.portada) */
+    background-color: var(--transparencia);
+    /* Con esto, damos un fondo semi-transparente al div */
+    width: 100%;
+    /* Con esto, el div ocupará todo el ancho del div padre */
+    height: 100%;
+    /* Con esto, el div ocupará todo el alto del div padre */
+    display: flex;
+    /* Con esto, podemos centrar el contenido dentro del div */
+    flex-direction: column;
+    /* Con esto, los elementos dentro del div se apilarán uno debajo del otro */
+    justify-content: center;
+    /* Con esto, el contenido dentro del div se centrará verticalmente */
+    align-items: center;
+    /* Con esto, el contenido dentro del div se centrará horizontalmente */
+}
+
+.icono {
+    height: 8rem;
+    width: 8rem;
+    padding: 0.5rem;
+    flex-shrink: 0;
+    /* Evita que se encoja el icono */
+}
+
+.caja-ubicación {
+    display: flex;
+    /* Coloca el icono y el párrafo en línea */
+    align-items: center;
+    /* Alinea verticalmente */
+    gap: 1rem;
+    /* Espacio entre icono y párrafo */
+}
+
+.caja-ubicación p {
+    margin: 0;
+    /* Elimina el margin por defecto del párrafo */
+}
+
+.botón {
+    background-color: var(--azul-rey);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.botón svg,
+.botón img {
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+}
+
+.caja-botones {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.botón:hover {
+    background-color: var(--amarillo);
+    color: var(--azul-rey);
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    /* Contenedor flex para centrar el contenido */
+    justify-content: center;
+    /* Centra horizontalmente */
+}
+
+.cuerpo {
+    width: 70%;
+    /* Con esto, el ancho del div se ajustará automáticamente al contenido dentro de él */
+    height: 100%;
+    /* Con esto, el div ocupará todo el alto del div padre */
+    display: flex;
+    /* Con esto, podemos centrar el contenido dentro del div */
+    flex-direction: column;
+    /* Con esto, los elementos dentro del div se apilarán uno debajo del otro */
+    justify-content: center;
+    /* Con esto, el contenido dentro del div se centrará verticalmente */
+    align-items: center;
+    /* Con esto, el contenido dentro del div se centrará horizontalmente */
+    margin: 0 auto;
+    /* Centra el div horizontalmente dentro de su contenedor padre */
+    margin-top: 4rem;
+}
+
+.sombreado {
+    box-shadow: 1px 1px 14px 0px rgba(0, 0, 0, 0.75);
+    background-color: var(--blanco);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        /* Usamos grid para organizar los servicios en una cuadrícula */
+        grid-template-columns: 1fr 1fr 1fr;
+        /* Tres columnas de igual tamaño (1fr = 1 fracción), si vemos, en total son 3 fracciones, así que, cada columna ocupará un tercio del espacio disponible */
+
+        /* Alternativa: grid-template-columns: repeat(3, 1fr); /* Esto hace lo mismo que la línea de arriba, pero es más conciso */
+
+        grid-template-rows: 1fr;
+        /* Dos filas, la primera de 200px y la segunda de 800px */
+
+        column-gap: 2rem;
+        /* Espacio entre columnas */
+        row-gap: 2rem;
+        /* Espacio entre filas */
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--azul-rey);
+    font-weight: bold;
+}
+
+.subtítulo h2 {
+    color: var(--azul-rey);
+}
+
+.servicio p {
+    line-height: 2;
+    /*interlineado*/
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 12rem;
+    width: 12rem;
+    background-color: var(--amarillo);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iconos svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    /** Utilizar el valor más pequeño **/
+    margin-top: 2rem;
+    margin: 0 auto;
+    /* Con esto, centramos el formulario horizontalmente */
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario legend {
+    color: var(--amarillo);
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.formulario fieldset {
+    border: none;
+    /* Con esto, quitamos el borde del fieldset */
+}
+
+.formulario h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .caja-campos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas de igual tamaño */
+        column-gap: 1rem;
+        /* Espacio entre columnas */
+        grid-template-rows: auto auto 15rem;
+
+        margin-bottom: 3rem;
+        /*El botón de enviar se me estaba encimando en la caja de mensaje XD*/
+    }
+
+    .campo:nth-child(3),
+    .campo:nth-child(4) {
+        grid-column: 1 / span 2;
+        /* Con esto, el tercer campo (el textarea) ocupará las dos columnas */
+    }
+
+}
+
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    display: block;
+    /* Con esto, el label se comporta como un bloque, ocupando todo el ancho disponible */
+    margin-bottom: 0.5rem;
+    /* Con esto, damos un espacio de 0.5rem entre el label y el input */
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+.campo input,
+.campo textarea {
+    border: none;
+    /* Con esto, quitamos el borde del input y del textarea */
+    width: 100%;
+    /* Con esto, el input y el textarea ocuparán todo el
+    ancho disponible */
+    padding: 1.5rem;
+    /* Con esto, damos un espacio de 1rem dentro
+ }  el input y el textarea */
+    border-radius: 0.5rem;
+    /* Con esto, damos un borde redondeado al input y al textarea */
+}
+
+.caja-boton {
+    text-align: center;
+    /* Con esto, centramos el botón dentro de su contenedor */
+}
+
+.caja-boton .botón {
+    width: 50%;
+    /* Con esto, el botón ocupará el 50% del ancho disponible */
+}
+
+.campo textarea {
+    height: 15rem;
+    /* Con esto, damos una altura fija al textarea */
+    resize: vertical;
+    /* Con esto, permitimos que el usuario pueda redimensionar el textarea sólo en vertical */
+}
+
+.pie-de-página {
+    background-color: var(--azul-rey);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-size: 1.4rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    .contenedor-3en1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /*Con esto, se crean 3 columnas de igual tamaño*/
+        gap: 3rem;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    .contenido-proyecto:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+}
+
+.contenedor-3en1 {
+    width: 100%;
+    /* Que ocupe todo el ancho disponible del contenedor padre */
+}
+
+.contenido-proyecto {
+    overflow: hidden;
+    margin-bottom: 3rem;
+    /* Evita que el contenido se desborde */
+
+    h3 {
+        text-align: center;
+    }
+
+    .descripcion-proyecto {
+        text-align: center;
+    }
+}
+
+.contenido-proyecto img,
+.foto-proyecto img {
+    max-width: 100%;
+    /* La imagen nunca será más ancha que su contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+.iconos-lenguajes {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.iconos-lenguajes img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.botones-proyecto {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.descripcion-proyecto {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+.modo-oscuro {
+
+    background-color: var(--grisOscuro);
+    background-image: none;
+    /* Quitamos el degradado del modo claro */
+    font-family: 'Roboto Condensed', sans-serif;
+
+    h2,
+    h3,
+    a {
+        color: var(--amarillo);
+    }
+
+    p,
+    summary,
+    li {
+        color: var(--blanco);
+    }
+
+    .sombreado {
+        background-color: var(--azul-rey);
+    }
+
+    .botón {
+        background-color: var(--grisOscuro);
+    }
+
+    .iconos {
+        background-color: var(--grisOscuro);
+
+        svg {
+            filter: invert(1);
+        }
+    }
+
+    .subtítulo {
+        color: var(--amarillo);
+    }
+
+    .caja-portada {
+        background-color: var(--transparencia-2);
+    }
+
+
+}
+
+.barra-de-arriba a.seccionActual {
+    background-color: var(--amarillo);
+    color: var(--azul-rey);
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.menu-imagen {
+    width: 3rem;
+    display: none;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu-imagen img {
+        width: 3rem;
+        margin: 0 auto;
+    }
+
+    .menu-imagen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        width: 100%;
+        background: transparent;
+        border: none;
+        color: var(--blanco);
+        font-size: 2rem;
+        padding: 1rem 0;
+        font-family: inherit;
+    }
+
+    .barra-de-arriba {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        background-color: var(--azul-rey);
+        border-radius: 0 0 1rem 1rem;
+        padding-bottom: 0;
+        margin-top: 0;
+        transition: max-height 0.5s ease-in, opacity 0.5s ease-in, padding-bottom 0.5s ease-in, margin-top 0.5s ease-in;
+    }
+
+    /* Clase que activaremos con JavaScript para mostrar el menú */
+    .barra-de-arriba.activo {
+        max-height: 50rem;
+        opacity: 1;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Todo esto se pone cuando escribes "html5" y le das enter, te da el formato en automático, como cuando metías a pata las librerías en C XD-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+    <!--Esta es la fuente Google Sans, quiero que mis páginas les recuerden a páginas de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!--Cambiamos de fuente a una un poquito más sofisticada en el Modo Oscuro, por los colores-->
+    <link rel="preload" href="css/style.css" as="style">
+    <!--El "preload" como relación del link, es para que sea lo primero que cargue de la página, y ya después el resto, pero tiene que ir junto con el link href tradicional-->
+    <!--Como quien dice: "Te aviso que te voy a pedir que carques ESTE archivo, para que lo tengas a la mano"-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- link, tal cual, vincula o conecta un archivo con otro, en este caso, el html con el css, y rel se le pone para decir qué relación tiene este archivo con el html, en este caso, que es la hoja de estilos, o sea, la hoja que describe de qué forma se tiene que ver cada elemento del html-->
+
+    <!--Es de esta forma que podremos vincular un head igual para todas las subpáginas que hagamos!...-->
+    <link href="css/normalize.css" rel="stylesheet">
+    <title>Alfonso Vélez - Desarrollador Web</title>
+</head>
+
+<body>
+    <!-- Desde el header hasta el cierre del nav, bien podría ser un solo archivo llamado "head", para incorporarlo en todas las páginas... -->
+    <div data-include="header">
+
+    </div>
+
+
+
+    <main class="cuerpo sombreado">
+
+        <section class="sobre-mi">
+            <h2>¡Hola! Soy Alfonso Vélez, un desarrollador web, apasionado de la creación de sitios y
+                aplicaciones web. Me encanta trabajar con las últimas tecnologías y crear soluciones innovadoras.
+            </h2>
+        </section>
+
+        <h2 class="subtítulo"> Mis Servicios:</h2>
+        <div class="servicios">
+            <section class="servicio">
+                <h3> Diseño Web </h3>
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-palette">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
+                        <path d="M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                        <path d="M11.5 7.5a1 a= " M7.5></path> /* Icono paleta de colores */
+                </div>
+                <p> ¿Quieres llegar a más personas con una página web personalizada para tu negocio? ¡Es posible! </p>
+            </section>
+
+            <section class="servicio">
+                <h3> Aplicaciones Web </h3>
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-android">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 10l0 6" />
+                        <path d="M20 10l0 6" />
+                        <path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0" />
+                        <path d="M8 3l1 2" />
+                        <path d="M16 3l-1 2" />
+                        <path d="M9 18l0 3" />
+                        <path d="M15 18l0 3" />
+                    </svg> <!-- Icono Android-->
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-apple">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077" />
+                        <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" />
+                    </svg> <!--Icono Apple-->
+
+                </div>
+
+                <p>Si además deseas que tu negocio tenga mayor interacción con tus clientes y que conozcan tus productos
+                    o servicios desde cualquier dispositivo, esta opción es para ti. </p>
+            </section>
+
+            <section class="servicio">
+                <h3> e-Commerce</h3>
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-credit-card">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -8" />
+                        <path d="M3 10l18 0" />
+                        <path d="M7 15l.01 0" />
+                        <path d="M11 15l2 0" />
+                    </svg> <!--Icono tarjeta de crédito-->
+                </div>
+                <p>¿Quieres convertir tu tienda a una tienda en línea? ¡Es posible! </p>
+            </section>
+        </div>
+        <h2>Si deseas saber más sobre mí, presiona el botón de abajo</h2>
+        <a class="botón" href="sobremi.html">Sobre mí</a>
+
+    </main>
+
+    <div data-include="footer">
+
+    </div>
+</body>
+
+<script src="js/llamarComponente.js"></script>
+<script src="js/accesibilidad.js"></script>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Todo esto se pone cuando escribes "html5" y le das enter, te da el formato en automático, como cuando metías a pata las librerías en C XD-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+    <!--Esta es la fuente Google Sans, quiero que mis páginas les recuerden a páginas de Google-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <!--El "preload" como relación del link, es para que sea lo primero que cargue de la página, y ya después el resto, pero tiene que ir junto con el link href tradicional-->
+    <!--Como quien dice: "Te aviso que te voy a pedir que carques ESTE archivo, para que lo tengas a la mano"-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- link, tal cual, vincula o conecta un archivo con otro, en este caso, el html con el css, y rel se le pone para decir qué relación tiene este archivo con el html, en este caso, que es la hoja de estilos, o sea, la hoja que describe de qué forma se tiene que ver cada elemento del html-->
+
+    <!--Es de esta forma que podremos vincular un head igual para todas las subpáginas que hagamos!...-->
+    <link href="css/normalize.css" rel="stylesheet">
+    <title>Alfonso Vélez - Desarrollador Web</title>
+</head>
+
+<body>
+    <div data-include="header">
+
+    </div>
+
+    <main class="cuerpo sombreado">
+        <h2> Contacto:</h2>
+        <section class="formulario">
+            <form action="mailto:alfonsopremier@gmail.com" method="POST" enctype="text/plain">
+                <!--Tipo de etiqueta para formularios. action='mailto:' abre el correo del usuario con los datos del formulario en el cuerpo del email-->
+                <fieldset> <!--Agrupa todos los elementos del formulario, no es indispensable, pero sí recomendado -->
+                    <legend>Ponte en contacto conmigo:</legend> <!--Da una descripción/título al formulario-->
+
+                    <div class="caja-campos">
+                        <div class="campo">
+                            <!--Usaremos div para agrupar un bloque en específico: aquí la diferencia será que, el div determina todo un renglón determinado por pixeles de ancho sólo para ese campo, lo cual, hace que, los demás elementos, en vez de ponerse a un lado, se irán hacia abajo, y eso se va a ir modificando y moldeando en el css, para lo que empezaremos a darle clases a cada campo en html, para que css sepa dónde y cómo poner cada elemento del código html.-->
+
+                            <label>Nombre: </label>
+                            <!--La etiqueta del cuadro, lo que se espera que ingrese el usuario-->
+                            <input type="text" name="Nombre" placeholder="Tu nombre">
+                            <!--El cuadro que llenará el usuario con datos. Hay varios tipos de input, por eso no lo puedo llamar sólo "textbox", pero, por defecto, sí recibe texto
+                
+                    El "placeholder" puede servir para dar un ejemplo o pista para que el usuario sepa qué se debe de ingresar. Por ejemplo, en el próximo campo de "correo", podemos poner: "Ejemplo: juan.perez@mail.com", y, mientras el campo no contenga información, mostrará ese ejemplo.-->
+                        </div>
+
+                        <div class="campo">
+                            <label>Teléfono: </label>
+                            <input type="tel" name="Teléfono" placeholder="Número de teléfono">
+                        </div>
+
+                        <div class="campo">
+                            <label>Correo: </label>
+                            <input type="email" name="Correo" placeholder="Ejemplo: juan.perez@mail.com">
+                        </div>
+
+                        <div class="campo">
+                            <label>Tu mensaje: </label>
+                            <textarea name="Mensaje" placeholder="Cuéntame! En qué puedo ayudarte?"></textarea>
+                            <!--Esto es de mi cosecha, se puede poner un placeholder dentro del textarea, que es básicamente un input de tipo text, pero que permite ingresar mucho más texto, y yo le añadí el placeholder para preguntar "Queloque quere?" XD-->
+                        </div>
+
+                    </div>
+
+                    <div class="caja-boton">
+                        <input class="botón" type="submit" value="Enviar">
+                        <!--Otra opción podría ser, que se me hace más práctica para otras cosas, es:
+                
+                <button type="submit">Enviar</button>
+
+                Considera esta opción para otras cosas que no sean formularios.
+                -->
+                    </div>
+
+
+
+                </fieldset>
+
+
+            </form>
+        </section>
+
+    </main>
+    <div data-include="footer">
+
+    </div>
+</body>
+<script src="js/llamarComponente.js"></script>
+<script src="js/accesibilidad.js"></script>
+
+</html>
