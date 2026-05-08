@@ -228,6 +228,7 @@ h1 {
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
+    text-align: center;
 }
 
 .botón svg,
@@ -615,5 +616,12 @@ main {
         opacity: 1;
         padding-bottom: 1rem;
         margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cuerpo {
+        max-width: 90%;
+        margin: 0 auto;
     }
 }
